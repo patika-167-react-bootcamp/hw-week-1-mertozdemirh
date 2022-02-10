@@ -1,6 +1,3 @@
-Array.prototype.includesCi= function(val) {
-    return this.map((item) => item.toLowerCase()).includes(val.toLowerCase())
+Array.prototype.includesCI = function (val) {
+  return this.some((item) => item.toLowerCase() === val.toLowerCase())  
 }
-
-const accessible = ["admin", "moderator", "superadmin", "guest"];
-console.log(accessible.includesCi("adMin"));
